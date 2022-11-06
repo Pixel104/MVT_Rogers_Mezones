@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="{% static 'Blog_coder/assets/img/navbar-logo.svg' %}" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="{% static 'Blog_coder/home.jpg' %}" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -50,15 +50,18 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Familiares</h2>
-                    <div class="text-lg-start">
-                    <ul>
-                        {% for individuo in lista_familiares %}
-                            <li>{{individuo.nombre}}</li>
-                            <li>{{individuo.edad}}</li>
-                            <li>{{individuo.fecha_nacimiento}}</li>
-                        {% endfor %}
-
-                    </ul>
+                    <div class="text-center">
+                        
+                        
+                            {% for individuo in lista_familiares %}
+                         <ul>
+                            <td>Nombre: {{individuo.nombre}} || </td>
+                            <td>Edad: {{individuo.edad}} Años || </td>
+                            <td>Fec. Nacimiento: {{individuo.fecha_nacimiento}}</td>
+                         </ul>  
+                            {% endfor %}
+                        
+                    
                     </div>
                 </div>
                 
@@ -70,7 +73,7 @@
             <div class="container">
                 <div class="text-center">
                     <h1 class="section-heading text-muted">About</h1>
-                    <h3 class="section-subheading text-muted">Realizado por Rogers Mezones</h3>
+                    <h3 class="section-subheading text-muted">Realizado por Rogers Mezones, se muestran datos de familiares guardados en la base de datos</h3>
                 
         </section>
         
